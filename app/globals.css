@@ -1,21 +1,22 @@
+/* Mantén la configuración previa */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Agrega BlackerProDisplay */
+@font-face {
+  font-family: "BlackerProDisplay";
+  src: url("/fonts/BlackerDisplayMediumItalic.ttf") format("ttf");
+  font-style: italic;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Asegúrate de que Inter sigue funcionando */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-sans;
+}
+
+.layout-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
 }
