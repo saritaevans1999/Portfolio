@@ -20,3 +20,39 @@ body {
   margin: 0 auto;
   padding: 0 80px;
 }
+
+@keyframes highlight {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #EA4C89; /* Accent color */
+  }
+}
+
+@keyframes highlight-left-to-right {
+  from {
+    background-size: 0% 100%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.highlight-text span {
+  display: inline-block;
+  transition: background-color 0.5s ease;
+  background-color: transparent;
+}
+
+.highlight-text {
+  display: inline-block;
+  background-image: linear-gradient(to right, #FFDFEB 0%, #FFDFEB 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1s ease-in-out;
+}
+
+.highlight-text.active {
+  animation: highlight-left-to-right 1s forwards;
+}

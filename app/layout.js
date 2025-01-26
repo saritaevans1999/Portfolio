@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body style={{ fontFamily: "'Inter', sans-serif" }}>
-        <div className="layout-container">{children}</div>
+        {children}
       </body>
     </html>
   );

@@ -4,39 +4,64 @@ import Link from "next/link"; // Import Link for navigation
 import Navbar from "./components/navbar"; // Import your Navbar component
 import { H1, H2, H3 } from "./components/typography"; // Import typography components
 import { PrimaryButton, AccentLink, SecondaryButton } from "./components/buttons";
+import { useEffect } from 'react';
 
 export default function HomePage() {
+  useEffect(() => {
+    const textElements = document.querySelectorAll('.highlight-text');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            entry.target.classList.remove('active');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    textElements.forEach(element => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
-      <div className="flex flex-col w-full mx-auto px-4" style={{ marginTop: "170px" }}>
+      <div className="layout-container flex flex-col w-full mx-auto px-4" style={{ marginTop: "170px" }}>
         {/* Hero Section */}
-        <div className="flex flex-row w-full max-w-[1120px] mx-auto" style={{ marginBottom: "170px" }}>
+        <div id="hero-section" className="flex flex-row justify-between w-full" style={{ marginBottom: "170px" }}>
           {/* Left Column */}
           <div className="w-1/2 space-y-8">
-            <H1>Hi, I’m Sarita.</H1>
+            <H1>
+              Hi, <span className="highlight-text">I'm Sarita.</span>
+            </H1>
             <p className="text-[16px] font-inter text-[#575655] leading-[1.5]">
               Currently helping shape the future of payments in LATAM at{" "}
-              <AccentLink href="https://www.cobre.co/">Cobre</AccentLink>. Aspiring to join Georgia Tech’s HCI MS.
+              <AccentLink href="https://www.cobre.co/">Cobre</AccentLink>.<br/>
+              Aspiring to join Georgia Tech's HCI MS.
             </p>
             <PrimaryButton>See selected work</PrimaryButton>
           </div>
 
           {/* Right Column */}
-          <div className="w-1/2 flex justify-start items-center">
+          <div className="w-1/2 flex justify-end items-start">
             <img
               src="/video_thumbnail.png"
               alt="Sarita Evans"
-              className="max-w-[445px] w-full h-auto object-left"
+              className="max-w-[445px] w-full h-auto object-contain"
             />
           </div>
         </div>
 
         {/* Selected Work Section */}
-        <div className="flex flex-col w-full max-w-[1120px] mx-auto space-y-10">
+        <div id="selected-work" className="flex flex-col w-full space-y-10">
           {/* Title */}
           <div className="mb-[40px]">
             <H2>Selected Work</H2>
@@ -71,10 +96,10 @@ export default function HomePage() {
               className="flex flex-col w-full mb-[40px]"
               style={{ height: "392px" }}
             >
-              <div className="flex justify-between max-w-[1120px] mx-auto">
+              <div className="flex justify-between">
                 {/* Text Column */}
                 <div className="w-1/2 pr-8" style={{ maxWidth: "446px" }}>
-                  <H3>{item.title}</H3>
+                  <H3><span className="highlight-text">{item.title}</span></H3>
                   <div className="mt-8 space-y-2">
                     {item.description.map((desc, idx) => (
                       <p key={idx} className="text-lg">
@@ -101,7 +126,7 @@ export default function HomePage() {
 
               {/* Divider */}
               {index < 2 && (
-                <div className="flex justify-between max-w-[1120px] mx-auto"></div>
+                <div className="flex justify-between"></div>
               )}
             </div>
           ))}
@@ -109,7 +134,8 @@ export default function HomePage() {
 
         {/* About Me Section */}
         <div
-          className="flex justify-between max-w-[1120px] mx-auto"
+          id="about-me"
+          className="flex justify-between"
           style={{ marginTop: "170px", marginBottom: "170px" }}
         >
           {/* Left Column */}
@@ -117,18 +143,18 @@ export default function HomePage() {
             <H2>About Me</H2>
             <H3>My journey in Product Design</H3>
             <p className="text-[16px] font-inter text-[#575655] leading-[1.5]">
-              I have over 3 years of experience as a product designer, specializing in
-              design systems, user research, and experience design. At Cobre, a leading
+              I have over <span className="font-semibold">3 years of experience as a product designer</span>, specializing in
+              design systems, user research, and experience design. <span className="font-semibold">At Cobre</span>, a leading
               Colombian fintech startup, I most notably built a scalable design system
-              from scratch and helped launch Colombia’s first instant payment railway.
+              from scratch and helped launch Colombia's first instant payment railway.
             </p>
             <p className="text-[16px] font-inter text-[#575655] leading-[1.5]">
-              My work combines creativity and technology to solve complex problems and
-              empower users. I’m passionate about creating meaningful products that
+              <span className="font-semibold">My work combines creativity and technology</span> to solve complex problems and
+              empower users. I'm passionate about creating meaningful products that
               balance functionality with business goals.
             </p>
             <p className="text-[16px] font-inter text-[#575655] leading-[1.5]">
-              When I’m not designing, you’ll find me practicing contemporary dancing,
+              When I'm not designing, <span className="font-semibold">you'll find me practicing contemporary dancing</span>,
               expressing myself through movement.
             </p>
           </div>
