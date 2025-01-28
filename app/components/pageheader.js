@@ -8,7 +8,7 @@ export default function PageHeader({ imageSrc, title }) {
       {/* Image on the left */}
       <div className="w-[97.4px] flex justify-start">
         <img
-          src="/logoCobre.png"
+          src={imageSrc}
           alt={title}
           className="w-full max-w-[445px]"
         />
@@ -16,7 +16,7 @@ export default function PageHeader({ imageSrc, title }) {
 
       {/* Title on the right */}
       <div className="w-1/2 pl-8">
-        <Subtitle></Subtitle>
+        <Subtitle>{title}</Subtitle>
       </div>
     </div>
   );
