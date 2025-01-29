@@ -11,8 +11,10 @@ export default function PageHeader({ imageSrc, title }) {
         <Image
           src={imageSrc}
           alt={title}
+          width={97}
+          height={97}
           className="w-full max-w-[445px]"
-        />
+        /> 
       </div>
 
       {/* Title on the right */}

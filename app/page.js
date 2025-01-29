@@ -41,12 +41,12 @@ export default function HomePage() {
           {/* Left Column */}
           <div className="w-1/2 space-y-8">
             <H1>
-              Hi, <span className="highlight-text">I'm Sarita.</span>
+              Hi, <span className="highlight-text">I&apos;m Sarita.</span>
             </H1>
             <p className="text-[16px] font-inter text-[#575655] leading-[1.5]">
               Currently helping shape the future of payments in LATAM at{" "}
               <AccentLink href="https://www.cobre.co/">Cobre</AccentLink>.<br/>
-              Aspiring to join Georgia Tech's HCI MS.
+              Aspiring to join Georgia Tech&apos;s HCI MS.
             </p>
             <PrimaryButton>See selected work</PrimaryButton>
           </div>
@@ -56,6 +56,8 @@ export default function HomePage() {
             <Image
               src="/video_thumbnail.png"
               alt="Sarita Evans"
+              width={445}
+              height={250}
               className="max-w-[445px] w-full h-auto object-contain"
             />
           </div>
@@ -120,6 +122,8 @@ export default function HomePage() {
                   <Image
                     src={item.image}
                     alt={item.title}
+                    width={446}
+                    height={250}
                     className="w-full rounded-lg shadow-lg object-left"
                   />
                 </div>
@@ -147,15 +151,15 @@ export default function HomePage() {
               I have over <span className="font-semibold">3 years of experience as a product designer</span>, specializing in
               design systems, user research, and experience design. <span className="font-semibold">At Cobre</span>, a leading
               Colombian fintech startup, I most notably built a scalable design system
-              from scratch and helped launch Colombia's first instant payment railway.
+              from scratch and helped launch Colombia&apos;s first instant payment railway.
             </p>
             <p className="text-[16px] font-inter text-[#575655] leading-[1.5]">
               <span className="font-semibold">My work combines creativity and technology</span> to solve complex problems and
-              empower users. I'm passionate about creating meaningful products that
+              empower users. I&apos;m passionate about creating meaningful products that
               balance functionality with business goals.
             </p>
             <p className="text-[16px] font-inter text-[#575655] leading-[1.5]">
-              When I'm not designing, <span className="font-semibold">you'll find me practicing contemporary dancing</span>,
+              When I&apos;m not designing, <span className="font-semibold">you&apos;ll find me practicing contemporary dancing</span>,
               expressing myself through movement.
             </p>
           </div>
@@ -165,6 +169,8 @@ export default function HomePage() {
             <Image
               src="/Sarita about me.png"
               alt="About Me"
+              width={360}
+              height={200}
               className="max-w-[360px] w-[360px] h-auto rounded-lg shadow-lg object-left"
               style={{ marginLeft: "0" }}
             />

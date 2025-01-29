@@ -25,7 +25,13 @@ export default function HomePage() {
               <TitleLight>From chaos to cohesion:</TitleLight>
               <Display className="mb-3">Building a scalable design system for a fast-paced startup</Display>
             </div>
-            <Image src="/unitymain.png" alt="Hero" className="w-full max-w-[1120px] pt-[120px] rounded-lg" />
+            <Image
+              src="/unitymain.png"
+              alt="Hero"
+              width={1120}
+              height={630}
+              className="w-full max-w-[1120px] pt-[120px] rounded-lg"
+            />
           </div>
         </div>
 
@@ -36,7 +42,13 @@ export default function HomePage() {
             <BodyMedium>
               Cobre lacked a design system, leading to inefficiencies and roadblocks. Teams were aware of the need for a solution, but competing priorities made it challenging to address the issue.
             </BodyMedium>
-            <Image src="/error.png" alt="Problem" className="w-full rounded-lg" />
+            <Image
+              src="/error.png"
+              alt="Problem"
+              width={684}
+              height={384}
+              className="w-full rounded-lg"
+            />
           </div>
         </div>
 

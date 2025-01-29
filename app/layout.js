@@ -1,6 +1,6 @@
 'use client';
 
-import './globals.css';
+import '../app/styles/globals.css' // Ensure your global styles are included
 import localFont from "next/font/local";
 import { Inter } from 'next/font/google'
 
