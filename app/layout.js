@@ -2,28 +2,20 @@
 
 import './globals.css';
 import localFont from "next/font/local";
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'], variable: "--font-inter" });
 
 const blacker = localFont({
-  src: [
-    {
-      path: "../public/fonts/BlackerDisplayMediumItalic.ttf",
-    },
-  ],
+  src: "../public/fonts/BlackerDisplayMediumItalic.ttf",
   variable: "--font-blacker",
+  display: "swap",
 });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${blacker.variable}`}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body style={{ fontFamily: "'Inter', sans-serif" }}>
+    <html lang="en" className={`${inter.variable} ${blacker.variable}`}>
+      <body className="font-inter">
         {children}
       </body>
     </html>

@@ -1,8 +1,9 @@
 'use client';
 
 import Link from "next/link"; // Import Link for navigation
+import Image from "next/image";
 import Navbar from "./components/navbar"; // Import your Navbar component
-import { H1, H2, H3 } from "./components/typography"; // Import typography components
+import { H1, H2, TitleSemi } from "./components/typography"; // Import typography components
 import { PrimaryButton, AccentLink, SecondaryButton } from "./components/buttons";
 import { useEffect } from 'react';
 
@@ -52,7 +53,7 @@ export default function HomePage() {
 
           {/* Right Column */}
           <div className="w-1/2 flex justify-end items-start">
-            <img
+            <Image
               src="/video_thumbnail.png"
               alt="Sarita Evans"
               className="max-w-[445px] w-full h-auto object-contain"
@@ -99,7 +100,7 @@ export default function HomePage() {
               <div className="flex justify-between">
                 {/* Text Column */}
                 <div className="w-1/2 pr-8" style={{ maxWidth: "446px" }}>
-                  <H3><span className="highlight-text">{item.title}</span></H3>
+                  <TitleSemi><span className="highlight-text">{item.title}</span></TitleSemi>
                   <div className="mt-8 space-y-2">
                     {item.description.map((desc, idx) => (
                       <p key={idx} className="text-lg">
@@ -116,7 +117,7 @@ export default function HomePage() {
 
                 {/* Image Column */}
                 <div className="w-1/2 flex justify-start">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
                     className="w-full rounded-lg shadow-lg object-left"
@@ -141,7 +142,7 @@ export default function HomePage() {
           {/* Left Column */}
           <div className="w-[640px] space-y-8">
             <H2>About Me</H2>
-            <H3>My journey in Product Design</H3>
+            <TitleSemi>My journey in Product Design</TitleSemi>
             <p className="text-[16px] font-inter text-[#575655] leading-[1.5]">
               I have over <span className="font-semibold">3 years of experience as a product designer</span>, specializing in
               design systems, user research, and experience design. <span className="font-semibold">At Cobre</span>, a leading
@@ -161,7 +162,7 @@ export default function HomePage() {
 
           {/* Right Column */}
           <div className="w-[360px]">
-            <img
+            <Image
               src="/Sarita about me.png"
               alt="About Me"
               className="max-w-[360px] w-[360px] h-auto rounded-lg shadow-lg object-left"

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white py-4 w-full top-0 z-10">
       <div className="layout-container flex justify-between items-center px-4">
-        <a href="/" className="text-small font-medium text-gray-900">Sarita Evans</a>
+        <Link href="/" className="text-small font-medium text-gray-900">Sarita Evans</Link>
         <ul className="hidden lg:flex gap-6">
           <li>
             {isHomePage ? (
@@ -24,9 +25,9 @@ const Navbar = () => {
                 Work
               </button>
             ) : (
-              <a href="/#selected-work" className="hover:text-blue-600">
+              <Link href="/#selected-work" className="hover:text-blue-600">
                 Work
-              </a>
+              </Link>
             )}
           </li>
           <li>
@@ -35,9 +36,9 @@ const Navbar = () => {
                 About me
               </button>
             ) : (
-              <a href="/#about-me" className="hover:text-blue-600">
+              <Link href="/#about-me" className="hover:text-blue-600">
                 About me
-              </a>
+              </Link>
             )}
           </li>
         </ul>

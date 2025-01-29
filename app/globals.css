@@ -13,6 +13,7 @@
 /* Asegúrate de que Inter sigue funcionando */
 body {
   @apply font-sans;
+  color: #212121; /* Set default text color */
 }
 
 .layout-container {
@@ -55,4 +56,13 @@ body {
 
 .highlight-text.active {
   animation: highlight-left-to-right 1s forwards;
+}
+
+/* Override for BodyMedium and BodyLarge */
+.body-medium {
+  color: #575655;
+}
+
+.body-large {
+  color: #575655;
 }

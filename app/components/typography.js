@@ -19,7 +19,7 @@ export const TitleReg = ({ children }) => (
 );
 
 export const TitleLight = ({ children }) => (
-  <h4 className="text-[24px] lg:text-[32px] font-weight: 200 font-inter">{children}</h4>
+  <h4 className="text-[24px] lg:text-[32px] font-light font-inter">{children}</h4>
 );
 
 export const H4 = ({ children }) => (
@@ -31,9 +31,13 @@ export const Subtitle = ({ children }) => (
 );
 
 export const BodyLarge = ({ children }) => (
-  <p className="text-[16px] lg:text-[18px] font-normal font-inter">{children}</p>
+  <p className="text-[#575655] text-lg lg:text-xl font-normal font-inter">{children}</p>
 );
 
 export const BodyMedium = ({ children }) => (
-  <p className="text-[14px] lg:text-[16px] font-normal font-inter">{children}</p>
+  <p className="text-[#575655] text-base lg:text-lg font-normal font-inter">{children}</p>
+);
+
+export const BodyLargeMid = ({ children }) => (
+  <p className="text-[#212121] text-lg lg:text-xl font-medium font-inter">{children}</p>
 );
