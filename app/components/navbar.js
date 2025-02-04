@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="bg-white py-4 w-full top-0 z-10">
       <div className="layout-container flex justify-between items-center px-4">
         <Link href="/" className="text-small font-medium text-gray-900">Sarita Evans</Link>
-        <ul className="hidden lg:flex gap-6">
+        <ul className="flex gap-4 lg:gap-6 text-sm lg:text-base">
           <li>
             {isHomePage ? (
               <button onClick={() => handleScroll('selected-work')} className="hover:text-blue-600">
@@ -42,7 +42,6 @@ const Navbar = () => {
             )}
           </li>
         </ul>
-        <button className="lg:hidden">☰</button>
       </div>
     </nav>
   );

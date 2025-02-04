@@ -29,17 +29,24 @@ export default function HomePage() {
     return () => observer.disconnect();
   }, []);
 
+  const handleScrollToWork = () => {
+    const element = document.getElementById('selected-work');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
-      <div className="layout-container flex flex-col w-full mx-auto px-4" style={{ marginTop: "170px" }}>
+      <div className="layout-container flex flex-col mx-auto px-4" style={{ marginTop: "80px" }}>
         {/* Hero Section */}
-        <div id="hero-section" className="flex flex-row justify-between w-full" style={{ marginBottom: "170px" }}>
+        <div id="hero-section" className="flex flex-col lg:flex-row justify-between w-full" style={{ marginBottom: "80px" }}>
           {/* Left Column */}
-          <div className="w-1/2 space-y-8">
+          <div className="w-full lg:w-1/2 space-y-8 mb-8 lg:mb-0">
             <H1>
               Hi, <span className="highlight-text">I&apos;m Sarita.</span>
             </H1>
@@ -48,11 +55,13 @@ export default function HomePage() {
               <AccentLink href="https://www.cobre.co/">Cobre</AccentLink>.<br/>
               Aspiring to join Georgia Tech&apos;s HCI MS.
             </p>
-            <PrimaryButton>See selected work</PrimaryButton>
+            <div className="hidden lg:block w-full">
+              <PrimaryButton className="w-full max-w-full" onClick={handleScrollToWork}>See selected work</PrimaryButton>
+            </div>
           </div>
 
           {/* Right Column */}
-          <div className="w-1/2 flex justify-end items-start">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-start">
             <Image
               src="/video_thumbnail.png"
               alt="Sarita Evans"
@@ -60,6 +69,9 @@ export default function HomePage() {
               height={250}
               className="max-w-[445px] w-full h-auto object-contain"
             />
+          </div>
+          <div className="w-full block lg:hidden mt-8">
+            <PrimaryButton className="w-full" onClick={handleScrollToWork}>See selected work</PrimaryButton>
           </div>
         </div>
 
@@ -97,11 +109,11 @@ export default function HomePage() {
             <div
               key={index}
               className="flex flex-col w-full mb-[40px]"
-              style={{ height: "392px" }}
+              style={{ height: "auto", minHeight: "392px" }}
             >
-              <div className="flex justify-between">
+              <div className="flex flex-col lg:flex-row justify-between">
                 {/* Text Column */}
-                <div className="w-1/2 pr-8" style={{ maxWidth: "446px" }}>
+                <div className="w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0" style={{ maxWidth: "100%", lg: { maxWidth: "446px" } }}>
                   <TitleSemi><span className="highlight-text">{item.title}</span></TitleSemi>
                   <div className="mt-8 space-y-2">
                     {item.description.map((desc, idx) => (
@@ -118,7 +130,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Image Column */}
-                <div className="w-1/2 flex justify-start">
+                <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -140,11 +152,11 @@ export default function HomePage() {
         {/* About Me Section */}
         <div
           id="about-me"
-          className="flex justify-between"
+          className="flex flex-col lg:flex-row justify-between"
           style={{ marginTop: "170px", marginBottom: "170px" }}
         >
           {/* Left Column */}
-          <div className="w-[640px] space-y-8">
+          <div className="w-full lg:w-[640px] space-y-8 mb-8 lg:mb-0">
             <H2>About Me</H2>
             <TitleSemi>My journey in Product Design</TitleSemi>
             <p className="text-[16px] font-inter text-[#575655] leading-[1.5]">
@@ -165,13 +177,13 @@ export default function HomePage() {
           </div>
 
           {/* Right Column */}
-          <div className="w-[360px]">
+          <div className="w-full lg:w-[360px]">
             <Image
               src="/Sarita about me.png"
               alt="About Me"
               width={360}
               height={200}
-              className="max-w-[360px] w-[360px] h-auto rounded-lg shadow-lg object-left"
+              className="max-w-full lg:max-w-[360px] w-full lg:w-[360px] h-auto rounded-lg shadow-lg object-left"
               style={{ marginLeft: "0" }}
             />
           </div>
@@ -180,4 +192,3 @@ export default function HomePage() {
     </>
   );
 }
-

@@ -17,9 +17,12 @@ body {
 }
 
 .layout-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 80px;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px; /* Optional: Add padding for mobile */
+  padding-right: 16px; /* Optional: Add padding for mobile */
 }
 
 @keyframes highlight {

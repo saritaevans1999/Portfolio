@@ -3,7 +3,7 @@
 export const PrimaryButton = ({ children, onClick }) => (
   <button
     onClick={onClick}
-    className="px-[16px] py-[8px] bg-[#212121] text-white text-base font-medium rounded-full hover:bg-[#414141] transition duration-200"
+    className="w-full lg:w-auto px-[16px] py-[8px] bg-[#212121] text-white text-base font-medium rounded-full hover:bg-[#414141] transition duration-200"
   >
     {children}
   </button>
