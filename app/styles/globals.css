@@ -5,8 +5,8 @@
 
 /* Agrega BlackerProDisplay */
 @font-face {
-  font-family: "BlackerProDisplay";
-  src: url("/fonts/BlackerDisplayMediumItalic.ttf") format("ttf");
+  font-family: 'BlackerProDisplay';
+  src: url('/fonts/BlackerDisplayMediumItalic.ttf') format('ttf');
   font-style: italic;
 }
 
@@ -30,7 +30,7 @@ body {
     background-color: transparent;
   }
   to {
-    background-color: #EA4C89; /* Accent color */
+    background-color: #ea4c89; /* Accent color */
   }
 }
 
@@ -51,7 +51,7 @@ body {
 
 .highlight-text {
   display: inline-block;
-  background-image: linear-gradient(to right, #FFDFEB 0%, #FFDFEB 100%);
+  background-image: linear-gradient(to right, #ffdfeb 0%, #ffdfeb 100%);
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: background-size 1s ease-in-out;
