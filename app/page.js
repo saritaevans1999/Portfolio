@@ -10,33 +10,15 @@ import {
   SecondaryButton,
 } from './components/buttons';
 import FooterLink from './components/footer-link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import PlayButton from './components/play-button';
 import VideoPlayer from './components/video-player';
+import useHighlighText from './hooks/use-highlight-text';
 
 export default function HomePage() {
   const [isIntroductionVideoOpen, setIsIntroductionVideoOpen] = useState(false);
 
-  useEffect(() => {
-    const textElements = document.querySelectorAll('.highlight-text');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          } else {
-            entry.target.classList.remove('active');
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    textElements.forEach((element) => observer.observe(element));
-
-    return () => observer.disconnect();
-  }, []);
+  useHighlighText();
 
   const handleScrollToWork = () => {
     const element = document.getElementById('selected-work');
