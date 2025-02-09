@@ -1,6 +1,6 @@
 'use client';
 
-import '../../app/styles/globals.css' // Ensure your global styles are included
+import '../styles/globals.css'; // Ensure your global styles are included
 import localFont from "next/font/local";
 
 const blacker = localFont({
