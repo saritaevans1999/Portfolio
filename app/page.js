@@ -111,13 +111,13 @@ export default function HomePage() {
               title: 'Cobre portal version 3.0',
               description: ['30k+ payments being processed biweekly.'],
               image: '/Cobre v3.png',
-              link: '/case2',
+              link: '/portal-version-3-0',
             },
             {
               title: 'Payment tracker',
               description: ['30k+ payments being processed biweekly.'],
               image: '/Tracker.png',
-              link: '/case3',
+              link: '/payment-tracker',
             },
           ].map((item, index) => (
             <div

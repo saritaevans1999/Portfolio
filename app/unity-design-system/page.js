@@ -12,7 +12,6 @@ import {
   TitleReg,
 } from '../components/typography';
 import PageHeader from '../components/pageheader';
-import './page.css';
 import useHighlightText from '../hooks/use-highlight-text';
 import FooterLink from '../components/footer-link';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
