@@ -14,6 +14,7 @@ import { useState } from 'react';
 import PlayButton from './components/play-button';
 import VideoPlayer from './components/video-player';
 import useHighlighText from './hooks/use-highlight-text';
+import { HiArrowDown } from 'react-icons/hi2';
 
 export default function HomePage() {
   const [isIntroductionVideoOpen, setIsIntroductionVideoOpen] = useState(false);
@@ -38,11 +39,11 @@ export default function HomePage() {
       />
 
       {/* Main Content */}
-      <div className="layout-container flex flex-col mx-auto px-4 mt-20">
+      <div className="layout-container flex flex-col mx-auto px-4 mt-16 lg:mt-[170px]">
         {/* Hero Section */}
         <div
           id="hero-section"
-          className="flex flex-col lg:flex-row justify-between w-full 4 mt-20"
+          className="flex flex-col lg:flex-row justify-between w-full"
         >
           {/* Left Column */}
           <div className="w-full lg:w-1/2 space-y-8 mb-8 lg:mb-0">
@@ -56,10 +57,10 @@ export default function HomePage() {
             </p>
             <div className="hidden lg:block w-full">
               <PrimaryButton
-                className="w-full max-w-full"
+                className="w-full max-w-full flex gap-3 items-center"
                 onClick={handleScrollToWork}
               >
-                See selected work
+                See selected work <HiArrowDown />
               </PrimaryButton>
             </div>
           </div>

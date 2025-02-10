@@ -70,7 +70,7 @@ export default function HomePage() {
       </div>
 
       {/* 🔍 Research Section */}
-      <div className="w-full bg-[#f1f0ec] py-12">
+      <div className="w-full bg-[#f1f0ec] py-12 max-lg:px-4">
         <div className="max-w-[800px] w-full mx-auto text-left space-y-10">
           <H2>
             <span className="highlight-text">
@@ -124,7 +124,7 @@ export default function HomePage() {
       </div>
 
       {/* 💡 Insights Section */}
-      <div className="w-full bg-[#f1f0ec] py-12">
+      <div className="w-full bg-[#f1f0ec] py-12 max-lg:px-4">
         <div className="max-w-[800px] w-full mx-auto text-left space-y-10">
           <H2>
             <span className="highlight-text">Insights</span>
@@ -167,7 +167,7 @@ export default function HomePage() {
       </div>
 
       {/* 🛠 Building Unity Section */}
-      <div className="w-full py-12">
+      <div className="w-full py-12 max-lg:px-4">
         <div className="max-w-[800px] w-full mx-auto text-left space-y-10">
           <H2>
             <span className="highlight-text">
@@ -232,7 +232,7 @@ export default function HomePage() {
       </div>
 
       {/* 🎨 Design Tokens Section */}
-      <div className="w-full py-12 bg-[#F1F0EC]">
+      <div className="w-full py-12 bg-[#F1F0EC] max-lg:px-4">
         <div className="max-w-[800px] w-full mx-auto text-left space-y-10">
           <H2>
             <span className="highlight-text">
@@ -249,7 +249,7 @@ export default function HomePage() {
                 src="/star-icon.png"
                 width={96}
                 height={96}
-                className="aspect-square"
+                className="aspect-square max-lg:w-8"
                 alt="Star Icon"
               />
             </div>
@@ -300,7 +300,7 @@ export default function HomePage() {
       </div>
 
       {/* 🚀 Project Outcomes Section */}
-      <div className="w-full py-12">
+      <div className="w-full py-12 max-lg:px-4">
         <div className="max-w-[800px] w-full mx-auto text-left space-y-10">
           <H2>
             <span className="highlight-text">

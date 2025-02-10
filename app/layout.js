@@ -1,7 +1,10 @@
-'use client';
-
 import '../app/styles/globals.css';
 import { inter, openSans, blacker } from './fonts';
+
+export const metadata = {
+  title: 'Sarita Evans | Product Designer at Cobre',
+  description: 'Welcome to My Portfolio Website',
+};
 
 export default function RootLayout({ children }) {
   return (

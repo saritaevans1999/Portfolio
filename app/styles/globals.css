@@ -50,7 +50,7 @@ body {
 }
 
 .highlight-text {
-  display: inline-block;
+  display: inline;
   background-image: linear-gradient(to right, #ffdfeb 0%, #ffdfeb 100%);
   background-size: 0% 100%;
   background-repeat: no-repeat;
