@@ -9,11 +9,13 @@ import {
   BodyMedium,
   BodyLargeMid,
   TitleLight,
+  TitleReg,
 } from '../components/typography';
 import PageHeader from '../components/pageheader';
 import './page.css';
 import useHighlightText from '../hooks/use-highlight-text';
 import FooterLink from '../components/footer-link';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function HomePage() {
   useHighlightText();
@@ -59,13 +61,18 @@ export default function HomePage() {
             roadblocks. Teams were aware of the need for a solution, but
             competing priorities made it challenging to address the issue.
           </BodyMedium>
-          <Image
-            src="/error.png"
-            alt="Problem"
-            width={684}
-            height={384}
-            className="w-full rounded-lg"
-          />
+          <div className="bg-[#FAF9F5] rounded-[36px] text-center p-[28px]">
+            <h3 className="font-inter font-semibold text-6xl mb-5">404</h3>
+            <TitleReg className="text-[#575655] mb-12 !font-normal">
+              Design system not found
+            </TitleReg>
+            <DotLottieReact
+              src="/404.lottie"
+              className="w-[350px] mx-auto"
+              loop
+              autoplay
+            />
+          </div>
         </div>
       </div>
 

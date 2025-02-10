@@ -105,7 +105,7 @@ export default function HomePage() {
                 '30% reduction in QA time.',
               ],
               image: '/Unity.png',
-              link: '/case1',
+              link: '/unity-design-system',
             },
             {
               title: 'Cobre portal version 3.0',
