@@ -30,23 +30,23 @@ export default function HomePage() {
         <div className="mt-10">
           <PageHeader
             imageSrc="/logoCobre.png"
-            title="Portal version 3.0"
+            title="Payment Tracker"
             width={97}
             height={50}
           />
         </div>
         <div className="space-y-2 mb-[120px]">
-          <TitleLight>Complexity to clarity:</TitleLight>
+          <TitleLight>Empowering Payment Management:</TitleLight>
           <Display className="mb-3">
-            Redesigning Cobre’s Costumer Portal for scalable growth
+            Crafting a Reliable Tool for Tracking Customer Payments
           </Display>
         </div>
         <div className="shadow-xl rounded-[32px] overflow-hidden max-w-[1120px]">
           <Image
-            src="/portalmain.png"
+            src="/payment-tracker-hero.png"
             alt="Hero"
-            width={2242}
-            height={1187}
+            width={2368}
+            height={1130}
             className="w-full "
           />
         </div>
@@ -95,10 +95,10 @@ export default function HomePage() {
             </ul>
           </div>
           <Image
-            src="/key-feature-portal.png"
-            alt="Key Feature"
-            width={1412}
-            height={813}
+            src="/payment-tracker-hero-2.png"
+            alt="Payment Tracker 2"
+            width={1407}
+            height={938}
             className="w-full rounded-[32px] overflow-hidden"
           />
         </div>
@@ -108,7 +108,7 @@ export default function HomePage() {
         <div className="max-w-[800px] w-full mx-auto text-left">
           <H2 className="mb-24">
             <span className="highlight-text">
-              The Challenge: Adopt an API-first approach
+              The Challenge: Improve Payment Timeline Transparency
             </span>
           </H2>
           <div className="p-5 pb-20 pt-7 rounded-2xl bg-white flex gap-3">
@@ -118,7 +118,7 @@ export default function HomePage() {
                 width={96}
                 height={96}
                 className="aspect-square max-lg:w-8 w-11"
-                alt="Star Icon"
+                alt="Info Icon"
               />
             </div>
             <div className="flex-1">
@@ -126,28 +126,22 @@ export default function HomePage() {
               <ul className="list-disc ml-5 flex flex-col gap-3">
                 <li>
                   <BodyMedium>
-                    The original product was designed with a portal-first
-                    approach, and APIs were developed as an afterthought.
+                    Users face frustration due to a lack of visibility into
+                    payment response times, especially during contingency
+                    scenarios.
                   </BodyMedium>
                 </li>
                 <li>
                   <BodyMedium>
-                    This structure lacked the scalability and flexibility
-                    required for international expansion.
+                    The absence of clear timelines leads to confusion and
+                    increased customer support requests.
                   </BodyMedium>
                 </li>
                 <li>
                   <BodyMedium>
-                    As the company grew, a significant number of clients became
-                    API-focused, prioritizing integration over the portal’s user
-                    interface.
-                  </BodyMedium>
-                </li>
-                <li>
-                  <BodyMedium>
-                    The portal was neither designed nor built to support an
-                    API-first model, creating inefficiencies and limitations for
-                    these users.
+                    A significant portion of support tickets (41%) is related to
+                    “Payment processing status,” indicating the need for better
+                    communication of payment updates.
                   </BodyMedium>
                 </li>
               </ul>
@@ -169,23 +163,20 @@ export default function HomePage() {
               <ul className="list-disc ml-5 flex flex-col gap-3">
                 <li>
                   <BodyMedium>
-                    Meet Client Expectations: Adapt to the growing demand for
-                    robust API integrations from international clients, shifting
-                    priorities to focus on interoperability and flexibility.
+                    Provide users with clear visibility into payment timelines
+                    under both normal and contingency conditions.
                   </BodyMedium>
                 </li>
                 <li>
                   <BodyMedium>
-                    Enable Scalability: Redesign the portal architecture to
-                    support cross-border operations and seamless integration
-                    with multiple financial partners.
+                    Minimize friction by reducing uncertainty and confusion
+                    about payment statuses.
                   </BodyMedium>
                 </li>
                 <li>
                   <BodyMedium>
-                    Drive Market Expansion: Build a solution capable of scaling
-                    with Cobre&apos;s ambitions to dominate the LATAM market and
-                    expand into global fintech ecosystems.
+                    Decrease support tickets related to payment inquiries by at
+                    least 30% within the first month.
                   </BodyMedium>
                 </li>
               </ul>
@@ -202,9 +193,10 @@ export default function HomePage() {
             </span>
           </H2>
           <BodyMedium>
-            The research phase began by uncovering user needs, analyzing
-            competitors, and mapping an initial structure to guide the redesign.
-            This work set the stage for a scalable and user-focused solution.
+            The research began by analyzing user pain points and support data to
+            pinpoint the core challenges. The insights gained informed the
+            foundational structure for addressing user frustrations. Here&apos;s
+            what we uncovered:
           </BodyMedium>
           <Timeline items={LAYING_THE_FOUNDATIONS} />
         </div>
@@ -221,43 +213,30 @@ export default function HomePage() {
           <ul className="list-disc ml-5 flex flex-col gap-3 mt-6 mb-16">
             <li>
               <BodyMedium>
-                Users need a simplified navigation structure to handle high
-                transaction volumes seamlessly.
+                Users need clear, real-time visibility into payment timelines,
+                including history and contingencies.
               </BodyMedium>
             </li>
             <li>
               <BodyMedium>
-                A focus on interoperability is critical to accommodate diverse
-                banking and financial systems.
+                A better design will reduce confusion, improve satisfaction, and
+                decrease support ticket volume.
               </BodyMedium>
             </li>
             <li>
               <BodyMedium>
-                The design must prioritize scalability to integrate future
-                features like Cobre Connect.
+                A focus on clarity will directly impact user trust and
+                retention.
               </BodyMedium>
             </li>
           </ul>
-          <div className="flex gap-6">
-            <div className="w-1/2 relative aspect-square">
-              <Image
-                src="/portal-insight-1.png"
-                width={662}
-                height={655}
-                className="w-full h-full object-cover"
-                alt="Insight 1"
-              />
-            </div>
-            <div className="w-1/2 relative aspect-square">
-              <Image
-                src="/portal-insight-2.png"
-                width={662}
-                height={655}
-                className="w-full h-full object-cover"
-                alt="Insight 2"
-              />
-            </div>
-          </div>
+          <Image
+            src="/payment-tracker-insight.png"
+            width={1368}
+            height={563}
+            className="w-full h-full object-cover"
+            alt="Payment Tracker Insight"
+          />
         </div>
       </div>
 
@@ -265,66 +244,55 @@ export default function HomePage() {
         <div className="max-w-[800px] w-full mx-auto text-left space-y-10">
           <H2>
             <span className="highlight-text">
-              The Approach: from Vision to Execution
+              The Approach: From Vision to Results
             </span>
           </H2>
           <BodyMedium>
-            Armed with insights from research, we devised a strategic approach
-            to redesign the portal, balancing user needs, technical scalability,
-            and business objectives. Our method focused on iterative design,
-            seamless collaboration, and prioritizing key features for an
-            API-first framework.
+            Armed with user feedback and iterative design, our efforts delivered
+            measurable outcomes that enhanced user experience and operational
+            efficiency.
           </BodyMedium>
           <div className="mb-10">
-            <BodyLargeMid className="mb-6">
-              Refining Information Architecture:
-            </BodyLargeMid>
+            <BodyLargeMid className="mb-6">Key results</BodyLargeMid>
             <ul className="list-disc ml-5 flex flex-col gap-3">
               <li>
                 <BodyMedium>
-                  Used feedback from stakeholders and research to finalize the
-                  portal&apos;s structure.
+                  Reduced Support Tickets: Achieved a milestone by reducing
+                  tickets associated with payment processing status to just 10%
+                  of the overall volume by November 2023.
                 </BodyMedium>
               </li>
               <li>
                 <BodyMedium>
-                  Ensured sections like Payments, Reports, and Accounts were
-                  intuitive and scalable.
+                  Increased Engagement: Reached an impressive engagement rate of
+                  65% by November 2023, showcasing strong user interaction and
+                  adoption of the new functionality.
+                </BodyMedium>
+              </li>
+            </ul>
+          </div>
+          <div className="mb-10">
+            <BodyLargeMid className="mb-6">Success metrics</BodyLargeMid>
+            <ul className="list-disc ml-5 flex flex-col gap-3">
+              <li>
+                <BodyMedium>
+                  Improved transparency and clarity in payment processing,
+                  driving user satisfaction.
+                </BodyMedium>
+              </li>
+              <li>
+                <BodyMedium>
+                  Lowered the burden on customer support teams, freeing
+                  resources for higher-value tasks.
                 </BodyMedium>
               </li>
             </ul>
           </div>
           <Image
-            src="/portal-vision-to-execution-1.png"
-            width={1368}
-            height={1057}
-            alt="Vision to Execution"
-            className="w-full"
-          />
-          <div className="mb-16 mt-20">
-            <BodyLargeMid className="mb-6">
-              Wireframe testing and iteration:
-            </BodyLargeMid>
-            <ul className="list-disc ml-5 flex flex-col gap-3">
-              <li>
-                <BodyMedium>
-                  Conducted usability tests with low-fidelity wireframes to
-                  validate workflows.
-                </BodyMedium>
-              </li>
-              <li>
-                <BodyMedium>
-                  Refined layouts and flows based on feedback from users and
-                  internal teams.
-                </BodyMedium>
-              </li>
-            </ul>
-          </div>
-          <Image
-            src="/portal-vision-to-execution-2.png"
-            width={1436}
-            height={846}
-            alt="Vision to Execution"
+            src="/payment-tracker-approach.png"
+            width={1458}
+            height={1337}
+            alt="Approach"
             className="w-full"
           />
         </div>
@@ -339,53 +307,37 @@ export default function HomePage() {
           <ul className="list-disc pl-5 space-y-2">
             <li>
               <BodyMedium>
-                The redesign of the Cobre Portal delivered impactful
-                improvements, setting a new benchmark for scalability,
-                efficiency, and user-centric design. Here&apos;s a snapshot of
-                the transformation:
+                The development of the Payment Tracker improved financial
+                transparency, giving users clearer, real-time insights into
+                their transactions and account activity. Here’s a snapshot of
+                its impact:
               </BodyMedium>
             </li>
           </ul>
           {[
             {
-              emoji: '/portal-outcome-1.png',
+              emoji: '/payment-tracker-outcome-1.png',
               title: (
                 <span>
-                  <strong>70%</strong> increase in task efficiency
+                  Reduced payment processing tickets to <strong>10%</strong>
                 </span>
               ),
-              description:
-                'Simplified workflows reduced user clicks from 14 to 4',
             },
             {
-              emoji: '/portal-outcome-2.png',
+              emoji: '/payment-tracker-outcome-2.png',
               title: (
                 <span>
-                  Over <strong>50+</strong> API endpoint integrations
+                  <strong>65%</strong> user engagement rates
                 </span>
               ),
-              description:
-                'Seamlessly connected banks, payment systems, and treasury tools.',
             },
             {
-              emoji: '/portal-outcome-3.png',
+              emoji: '/payment-tracker-outcome-3.png',
               title: (
                 <span>
-                  <strong>Scalable</strong> design system
+                  <strong>30%</strong> fewer support tickets in month 1
                 </span>
               ),
-              description:
-                'Supported 70+ user flows with modular, reusable components',
-            },
-            {
-              emoji: '/portal-outcome-4.png',
-              title: (
-                <span>
-                  <strong>30k+</strong> payments being processed biweekly
-                </span>
-              ),
-              description:
-                'Built to handle high transaction volumes across geographies.',
             },
           ].map((outcome, index) => (
             <div key={index} className="flex items-center gap-4">
@@ -404,14 +356,13 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-      <div className="max-w-[800px] w-full mx-auto">
-        <Image
-          src="/portal-project-outcome.png"
-          width={1368}
-          height={781}
-          alt="Project Outcome"
-          className="my-10 px-4"
-        />
+      <div className="max-w-[800px] my-10 w-full mx-auto relative aspect-video">
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
+          src="https://embed.figma.com/proto/U1LOymuiCR5AJgofoQnrcb/Portfolio?page-id=45%3A3728&node-id=412-31433&viewport=-33509%2C-28572%2C0.97&scaling=min-zoom&content-scaling=fixed&embed-host=share"
+          allowFullScreen
+        ></iframe>
       </div>
       <FooterLink />
     </>

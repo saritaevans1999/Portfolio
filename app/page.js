@@ -117,7 +117,7 @@ export default function HomePage() {
               title: 'Payment tracker',
               description: ['30k+ payments being processed biweekly.'],
               image: '/Tracker.png',
-              link: '/case3',
+              link: '/payment-tracker',
             },
           ].map((item, index) => (
             <div

@@ -25,9 +25,9 @@ const TimelineItem = ({ item, index, isLastItem }) => {
         <div className="bg-[#FFC6DC] rounded-full flex items-center justify-center w-10 aspect-square">
           <h3 className="text-[#EA4C89]">{index + 1}</h3>
         </div>
-        {!isLastItem && <TimelineArrow />}
+        {!isLastItem && <TimelineArrow height={item.arrowHeight} />}
       </div>
-      <div className="">
+      <div>
         <BodyLargeMid className="mt-2">{title}</BodyLargeMid>
         <ul className="list-disc ml-5 flex flex-col gap-3 mt-6 mb-12">
           {list.map((text) => (
@@ -41,17 +41,19 @@ const TimelineItem = ({ item, index, isLastItem }) => {
   );
 };
 
-const TimelineArrow = () => {
+const TimelineArrow = ({ height = 91 }) => {
   return (
     <svg
       width="19"
-      height="91"
-      viewBox="0 0 19 91"
+      height={height}
+      viewBox={`0 0 19 ${height}`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M9.4994 1.08203L9.4994 90.1494M9.4994 90.1494L18.3672 81.2816M9.4994 90.1494L0.631611 81.2816"
+        d={`M9.5 1V${height - 1}M9.5 ${height - 1}L18.4 ${height - 10}M9.5 ${
+          height - 1
+        }L0.6 ${height - 10}`}
         stroke="#212121"
         strokeOpacity="0.5"
         strokeWidth="0.5"
