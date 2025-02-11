@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="layout-container flex justify-between items-center px-4">
         <div className="flex gap-2 items-center">
           <div className="w-5 rounded overflow-hidden">
-            <video className="w-full h-auto" autoPlay loop muted>
+            <video className="w-full h-auto" autoPlay loop muted playsInline>
               <source src="/videos/navbar-emoji.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
