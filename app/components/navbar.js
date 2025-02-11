@@ -17,9 +17,17 @@ const Navbar = () => {
   return (
     <nav className="bg-white py-4 w-full top-0 z-10 font-open-sans font-medium">
       <div className="layout-container flex justify-between items-center px-4">
-        <Link href="/" className="text-small font-medium text-gray-900">
-          Sarita Evans
-        </Link>
+        <div className="flex gap-2 items-center">
+          <div className="w-5 rounded overflow-hidden">
+            <video className="w-full h-auto" autoPlay loop muted>
+              <source src="/videos/navbar-emoji.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <Link href="/" className="text-small font-medium text-gray-900">
+            Sarita Evans
+          </Link>
+        </div>
         <ul className="flex gap-4 lg:gap-6 text-sm lg:text-base">
           <li>
             {isHomePage ? (
