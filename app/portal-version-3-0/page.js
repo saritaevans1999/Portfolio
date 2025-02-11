@@ -331,7 +331,7 @@ export default function HomePage() {
       </div>
 
       {/* 🚀 Project Outcomes Section */}
-      <div className="w-full py-12 max-lg:px-4 bg-[#F1F0EC]">
+      <div className="w-full py-12 max-lg:px-4 bg-[#F1F0EC] mb-10">
         <div className="max-w-[800px] w-full mx-auto text-left space-y-10">
           <H2>
             <span className="highlight-text">Project Outcomes</span>
@@ -403,15 +403,6 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="max-w-[800px] w-full mx-auto">
-        <Image
-          src="/portal-project-outcome.png"
-          width={1368}
-          height={781}
-          alt="Project Outcome"
-          className="my-10 px-4"
-        />
       </div>
       <FooterLink />
     </>
