@@ -80,8 +80,11 @@ export default function HomePage() {
             </div>
           </div>
           <div className="w-full block lg:hidden mt-8">
-            <PrimaryButton className="w-full" onClick={handleScrollToWork}>
-              See selected work
+            <PrimaryButton
+              className="w-full flex gap-3 items-center justify-center"
+              onClick={handleScrollToWork}
+            >
+              See selected work <HiArrowDown />
             </PrimaryButton>
           </div>
         </div>
